@@ -1,10 +1,12 @@
 import store from './store'
 import Table from './components/table'
+import Nc from './components/new_component'
 
 export default {
   render (h) {
     return (
       <div id="app">
+        <Nc cols={store.state.cols} />
         <p>
           Rendering a {store.state.rows} x {store.state.cols} table,
           with 25 spans in every cell.
